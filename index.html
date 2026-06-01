@@ -3,45 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Drost &amp; Denise Drost — drost.us</title>
-  <meta name="description" content="Detroit-area professionals in middle-market consulting, keynote speaking, and professional events. Explore Alex Drost's speaking, Denise Drost's event leadership, and the Drost Group.">
+  <title>Alex Drost — drost.us</title>
+  <meta name="description" content="Alex Drost — keynote speaker and strategy consultant serving middle-market professional service firms. Detroit, Michigan.">
 
-  <!-- Favicon: Bold Orange "D" with Transparent Background -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='52%' dominant-baseline='central' text-anchor='middle' font-family='Inter, system-ui, sans-serif' font-weight='900' font-size='85' fill='%23FF7B00'>D</text></svg>">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Alex Drost &amp; Denise Drost — drost.us">
-  <meta property="og:description" content="Detroit-area professionals in middle-market consulting, keynote speaking, and professional events.">
+  <meta property="og:title" content="Alex Drost — drost.us">
+  <meta property="og:description" content="Keynote speaker and strategy consultant serving middle-market professional service firms.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://drost.us">
 
-  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg: #0A0A0F;
-      --bg-accent: #0E0E14;
-      --surface: #16161E;
-      --surface-hover: #1C1C26;
       --orange: #FF7B00;
       --orange-muted: rgba(255, 123, 0, 0.15);
-      --orange-bright: #FFAA5A;
       --text-primary: #F8F8F2;
       --text-secondary: #A0A0B0;
       --text-muted: #626274;
       --border: #2A2A35;
-      --border-hover: #3F3F4F;
       --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Inter', -apple-system, system-ui, sans-serif;
@@ -49,79 +37,35 @@
       color: var(--text-primary);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
-    /* Background Grain & Glow */
-    .bg-glow {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background: 
-        radial-gradient(circle at 15% 15%, rgba(255, 123, 0, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 85% 85%, rgba(255, 123, 0, 0.03) 0%, transparent 40%);
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* Navigation */
-    .site-nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 1.5rem 2.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(10, 10, 15, 0.8);
-      backdrop-filter: blur(12px);
-      z-index: 100;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    }
-
-    .nav-brand {
-      font-weight: 800;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-    }
-
-    .nav-tag {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      letter-spacing: 0.05em;
-      padding: 0.4rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 100px;
-    }
-
-    /* Hero */
-    .hero {
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 8rem 1.5rem 4rem;
-      max-width: 1000px;
-      margin: 0 auto;
+      padding: 2rem;
+      overflow-x: hidden;
     }
 
-    .hero-eyebrow {
+    .bg-glow {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(255, 123, 0, 0.07) 0%, transparent 45%),
+        radial-gradient(circle at 80% 90%, rgba(255, 123, 0, 0.035) 0%, transparent 45%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .eyebrow {
       display: inline-block;
       color: var(--orange);
       font-weight: 700;
       letter-spacing: 0.25em;
       text-transform: uppercase;
-      font-size: 1rem;
+      font-size: 0.8rem;
       padding: 0.6rem 1.8rem;
       border: 1px solid var(--orange-muted);
       background: rgba(255, 123, 0, 0.03);
@@ -131,266 +75,76 @@
       animation: fadeInDown 0.8s forwards;
     }
 
-    .hero h1 {
-      font-size: clamp(2.5rem, 8vw, 4.5rem);
-      font-weight: 900;
-      line-height: 1.1;
-      margin-bottom: 2rem;
-      letter-spacing: -0.02em;
+    h1 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: clamp(3rem, 13vw, 7rem);
+      font-weight: 600;
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.75rem;
       opacity: 0;
       animation: fadeInUp 0.8s 0.2s forwards;
     }
 
-    .hero h1 span {
-      background: linear-gradient(to bottom right, #fff, #a0a0b0);
+    h1 span {
+      background: linear-gradient(to bottom right, #fff, #9a9aac);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .hero-subhead {
-      font-size: 1.125rem;
+    h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--orange);
+    }
+
+    .subhead {
+      font-size: 1.15rem;
       color: var(--text-secondary);
-      max-width: 600px;
+      max-width: 540px;
       margin-bottom: 3rem;
       opacity: 0;
       animation: fadeInUp 0.8s 0.4s forwards;
     }
 
-    /* About Section */
-    .about {
-      padding: 6rem 1.5rem;
-      background: var(--bg-accent);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .about-content {
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .about p {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
-    }
-
-    .henry-badge {
+    .linkedin-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      margin-top: 2rem;
-      padding: 0.5rem 1rem;
-      background: var(--surface);
+      gap: 0.6rem;
+      padding: 0.85rem 1.75rem;
       border: 1px solid var(--border);
       border-radius: 100px;
-      font-size: 0.85rem;
       color: var(--text-primary);
-    }
-
-    /* Grid Section */
-    .properties {
-      padding: 8rem 1.5rem 12rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      text-align: center;
       font-size: 0.9rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.25em;
-      color: var(--orange);
-      margin-bottom: 4rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 2.5rem;
-      border-radius: 1.25rem;
-      transition: var(--transition);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      background: var(--surface-hover);
-      border-color: var(--border-hover);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
-
-    .card--featured {
-      border-color: var(--orange-muted);
-      background-color: rgba(255, 123, 0, 0.02);
-    }
-
-    .card--featured:hover {
-      border-color: var(--orange);
-      background-color: rgba(255, 123, 0, 0.05);
-    }
-
-    .card-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--orange-muted);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.5rem;
-      color: var(--orange);
-      transition: var(--transition);
-    }
-
-    .card:hover .card-icon {
-      color: white;
-      background: var(--orange);
-      transform: scale(1.1);
-    }
-
-    .card-title {
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
-
-    .title-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-    }
-
-    .name-text {
-      font-size: 1.35rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-
-    .domain-text {
-      font-size: 0.8rem;
-      color: var(--orange-bright);
       font-weight: 500;
-      opacity: 0.8;
-      letter-spacing: 0.02em;
-    }
-
-    .card-arrow {
-      font-size: 1.1rem;
-      opacity: 0.3;
       transition: var(--transition);
-      margin-top: 0.2rem;
+      margin-top: 2.5rem;
+      opacity: 0;
+      animation: fadeInUp 0.8s 0.6s forwards;
     }
 
-    .card:hover .card-arrow {
-      opacity: 1;
-      transform: translate(2px, -2px);
+    .linkedin-link:hover {
+      border-color: var(--orange);
       color: var(--orange);
+      transform: translateY(-2px);
     }
 
-    .card-text {
-      color: var(--text-secondary);
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-      flex-grow: 1;
-    }
-
-    .card-tags {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .tag {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      padding: 0.25rem 0.75rem;
-      background: rgba(255, 123, 0, 0.08);
-      border: 1px solid var(--orange-muted);
-      border-radius: 4px;
-      color: var(--orange-bright);
-    }
-
-    /* Footer */
-    .site-footer {
-      background: #050508;
-      padding: 4rem 2.5rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .footer-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .footer-info {
-      font-size: 0.85rem;
+    .footer-note {
+      position: fixed;
+      bottom: 2rem;
+      font-size: 0.8rem;
       color: var(--text-muted);
+      opacity: 0;
+      animation: fadeInUp 0.8s 0.8s forwards;
     }
 
-    .footer-nav {
-      display: flex;
-      gap: 1.5rem;
-    }
-
-    .footer-nav a {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      transition: var(--transition);
-    }
-
-    .footer-nav a:hover {
-      color: var(--orange);
-    }
-
-    /* Animations */
     @keyframes fadeInUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .hero {
-        padding-top: 6rem;
-      }
-
-      .site-nav {
-        padding: 1.2rem 1.5rem;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
     }
   </style>
 </head>
@@ -398,128 +152,17 @@
 
   <div class="bg-glow"></div>
 
-  <nav class="site-nav">
-    <div class="nav-brand">DROST</div>
-    <div class="nav-tag">Drost.us</div>
-  </nav>
+  <p class="eyebrow">drost.us</p>
+  <h1><span>Alex</span> <em>Drost</em></h1>
 
-  <header class="hero">
-    <p class="hero-eyebrow">Alex &amp; Denise Drost</p>
-    <h1>
-      <span>Two Careers.</span><br>
-      <span>One Community.</span>
-    </h1>
-    <p class="hero-subhead">
-      Alex and Denise Drost are Detroit-area professionals with deep roots in middle-market strategy, keynote speaking, and high-caliber experiential events.
-    </p>
-  </header>
+  <a href="https://www.linkedin.com/in/adrost/" target="_blank" rel="noopener" class="linkedin-link">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+    Connect with Alex Drost on LinkedIn
+  </a>
 
-  <section class="about">
-    <div class="about-content">
-      <p>
-        From the boardrooms of middle-market firms to the stage of major industry conferences, the Drosts are committed to building professional community. 
-        When they aren’t advising firm leaders or directing events, you’ll likely find them on a road trip across Michigan.
-      </p>
-      <div class="henry-badge">
-        <span>🐕</span> Always joined by Henry, the Goldendoodle
-      </div>
-    </div>
-  </section>
-
-  <section class="properties">
-    <p class="section-label">Learn More</p>
-    <div class="grid">
-      
-      <!-- Alex Drost -->
-      <a href="https://alexdrost.com" class="card card--featured">
-        <div class="card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-        </div>
-        <div class="card-title">
-          <div class="title-group">
-            <span class="name-text">Alex Drost</span>
-            <span class="domain-text">alexdrost.com</span>
-          </div>
-          <span class="card-arrow">→</span>
-        </div>
-        <p class="card-text">Keynote speaker and strategy consultant serving middle-market professional service firms.</p>
-        <div class="card-tags">
-          <span class="tag">Speaking</span>
-          <span class="tag">Consulting</span>
-        </div>
-      </a>
-
-      <!-- Denise Drost -->
-      <a href="https://denisedrost.com" class="card card--featured">
-        <div class="card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-        </div>
-        <div class="card-title">
-          <div class="title-group">
-            <span class="name-text">Denise Drost</span>
-            <span class="domain-text">denisedrost.com</span>
-          </div>
-          <span class="card-arrow">→</span>
-        </div>
-        <p class="card-text">Experiential events expert and Executive Director of ACG Western Michigan.</p>
-        <div class="card-tags">
-          <span class="tag">Events</span>
-          <span class="tag">leadership</span>
-        </div>
-      </a>
-
-      <!-- Drost Group -->
-      <a href="https://drost.group" class="card card--featured">
-        <div class="card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
-        </div>
-        <div class="card-title">
-          <div class="title-group">
-            <span class="name-text">Drost Group</span>
-            <span class="domain-text">drost.group</span>
-          </div>
-          <span class="card-arrow">→</span>
-        </div>
-        <p class="card-text">Middle-market advisory focusing on strategy, growth, and value creation for professional services.</p>
-        <div class="card-tags">
-          <span class="tag">Advisory</span>
-          <span class="tag">Growth</span>
-        </div>
-      </a>
-
-      <!-- Family Hub -->
-      <a href="https://drost.family" class="card card--featured">
-        <div class="card-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-        </div>
-        <div class="card-title">
-          <div class="title-group">
-            <span class="name-text">Drost Family</span>
-            <span class="domain-text">drost.family</span>
-          </div>
-          <span class="card-arrow">→</span>
-        </div>
-        <p class="card-text">Adventures in the Detroit area and beyond. Life at home with Alex, Denise, and Henry.</p>
-        <div class="card-tags">
-          <span class="tag">Lifestyle</span>
-          <span class="tag">Michigan</span>
-        </div>
-      </a>
-
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-info">
-        &copy; <script>document.write(new Date().getFullYear())</script> Alex Drost &middot; Detroit, Michigan
-      </div>
-      <nav class="footer-nav">
-        <a href="https://www.linkedin.com/in/adrost/" target="_blank">Alex Drost LinkedIn</a>
-        <a href="https://www.linkedin.com/in/denisemdrost/" target="_blank">Denise Drost LinkedIn</a>
-      </nav>
-    </div>
-  </footer>
+  <div class="footer-note">
+    &copy; <script>document.write(new Date().getFullYear())</script> Alex Drost &middot; Detroit, Michigan
+  </div>
 
 </body>
 </html>
