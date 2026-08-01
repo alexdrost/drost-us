@@ -1,168 +1,380 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Drost — drost.us</title>
-  <meta name="description" content="Alex Drost — keynote speaker and strategy consultant serving middle-market professional service firms. Detroit, Michigan.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='52%' dominant-baseline='central' text-anchor='middle' font-family='Inter, system-ui, sans-serif' font-weight='900' font-size='85' fill='%23FF7B00'>D</text></svg>">
+<title>Alex Drost | Advisor, Speaker &amp; CPA — Detroit, MI</title>
+<meta name="description" content="Alex Drost — advisor, speaker, and CPA in Detroit, Michigan. Links to writing, advisory work, projects, and the Branch Out podcast.">
+<link rel="canonical" href="https://drost.us/">
+<meta name="author" content="Alex Drost">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#12110f" media="(prefers-color-scheme: dark)">
 
-  <meta property="og:title" content="Alex Drost — drost.us">
-  <meta property="og:description" content="Keynote speaker and strategy consultant serving middle-market professional service firms.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://drost.us">
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alex Drost">
+<meta property="og:title" content="Alex Drost | Advisor, Speaker &amp; CPA — Detroit, MI">
+<meta property="og:description" content="Advisor, speaker, and CPA working at the seam where strategy meets execution.">
+<meta property="og:url" content="https://drost.us/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Alex Drost | Advisor, Speaker &amp; CPA">
+<meta name="twitter:description" content="Advisor, speaker, and CPA working at the seam where strategy meets execution.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:opsz,wght@14..32,300..800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23f6f5f1'/><text x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia, serif' font-weight='600' font-size='62' fill='%23c9662a'>D</text></svg>">
 
-  <style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400..650&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     SCHEMA — Person (MVP per build handoff)
+     RULES: every URL live · never list drost.us itself ·
+     keep identical (minus self) across all properties.
+     ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alex Drost",
+  "url": "https://drost.us",
+  "jobTitle": "Advisor & Speaker",
+  "sameAs": [
+    "https://www.alexdrost.com",
+    "https://bookshelf.drost.us",
+    "https://vibe.drost.us",
+    "https://thebusinessofaccounting.com",
+    "https://www.linkedin.com/in/adrost/"
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg:         #f6f5f1;
+    --bg-row:     #ffffff;
+    --ink:        #1a1a18;
+    --ink-dim:    #5f5f58;
+    --ink-faint:  #9b9b94;
+    --accent:     #c9662a;
+    --line:       #e6e4dd;
+    --line-hi:    #d2cec2;
+    --shadow:     0 1px 2px rgba(30,28,22,.045);
+    --shadow-hi:  0 8px 26px rgba(30,28,22,.10);
+    --radius:     13px;
+    --maxw:       560px;
+  }
+
+  @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0A0A0F;
-      --orange: #FF7B00;
-      --orange-muted: rgba(255, 123, 0, 0.15);
-      --text-primary: #F8F8F2;
-      --text-secondary: #A0A0B0;
-      --text-muted: #626274;
-      --border: #2A2A35;
-      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      --bg:        #12110f;
+      --bg-row:    #1a1917;
+      --ink:       #f2f0ea;
+      --ink-dim:   #a3a099;
+      --ink-faint: #726f68;
+      --accent:    #e8863f;
+      --line:      #2a2825;
+      --line-hi:   #3d3a35;
+      --shadow:    0 1px 2px rgba(0,0,0,.3);
+      --shadow-hi: 0 8px 26px rgba(0,0,0,.45);
     }
+  }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
 
-    body {
-      font-family: 'Inter', -apple-system, system-ui, sans-serif;
-      background-color: var(--bg);
-      color: var(--text-primary);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 2rem;
-      overflow-x: hidden;
-    }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-feature-settings: "kern" 1, "liga" 1;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(3rem, 9vh, 6.5rem) 1.15rem 2.5rem;
+    line-height: 1.55;
+  }
 
-    .bg-glow {
-      position: fixed;
-      inset: 0;
-      background:
-        radial-gradient(circle at 50% 20%, rgba(255, 123, 0, 0.07) 0%, transparent 45%),
-        radial-gradient(circle at 80% 90%, rgba(255, 123, 0, 0.035) 0%, transparent 45%);
-      pointer-events: none;
-      z-index: -1;
-    }
+  /* barely-there warm wash, echoing the glow on the old index */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,102,42,.055), transparent 70%),
+      radial-gradient(ellipse 60% 40% at 85% 100%, rgba(201,102,42,.03), transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
 
-    a { text-decoration: none; color: inherit; }
+  .wrap {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: var(--maxw);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
 
-    .eyebrow {
-      display: inline-block;
-      color: var(--orange);
-      font-weight: 700;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      padding: 0.6rem 1.8rem;
-      border: 1px solid var(--orange-muted);
-      background: rgba(255, 123, 0, 0.03);
-      border-radius: 100px;
-      margin-bottom: 2.5rem;
-      opacity: 0;
-      animation: fadeInDown 0.8s forwards;
-    }
+  /* ---------- Header ---------- */
+  header { margin-bottom: clamp(2rem, 5vh, 3rem); }
 
-    h1 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-size: clamp(3rem, 13vw, 7rem);
-      font-weight: 600;
-      line-height: 0.95;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.75rem;
-      opacity: 0;
-      animation: fadeInUp 0.8s 0.2s forwards;
-    }
+  h1 {
+    font-family: Fraunces, Georgia, "Times New Roman", serif;
+    font-optical-sizing: auto;
+    font-size: clamp(2.5rem, 10vw, 3.6rem);
+    font-weight: 600;
+    letter-spacing: -0.028em;
+    line-height: 1;
+    color: var(--ink);
+  }
 
-    h1 span {
-      background: linear-gradient(to bottom right, #fff, #9a9aac);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  .positioning {
+    margin-top: 1.05rem;
+    font-size: clamp(1.02rem, 3.4vw, 1.14rem);
+    color: var(--ink-dim);
+    max-width: 30ch;
+    text-wrap: pretty;
+  }
+  .positioning .seam { color: var(--accent); }
 
-    h1 em {
-      font-style: italic;
-      font-weight: 400;
-      color: var(--orange);
-    }
+  .rule {
+    margin-top: 1.6rem;
+    width: 44px;
+    height: 2px;
+    background: var(--accent);
+    border-radius: 2px;
+  }
 
-    .subhead {
-      font-size: 1.15rem;
-      color: var(--text-secondary);
-      max-width: 540px;
-      margin-bottom: 3rem;
-      opacity: 0;
-      animation: fadeInUp 0.8s 0.4s forwards;
-    }
+  /* ---------- Directory ---------- */
+  .group-label {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.655rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 1.85rem 0 0.7rem;
+    padding-left: 0.15rem;
+  }
+  .group-label:first-of-type { margin-top: 0; }
 
-    .linkedin-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.85rem 1.75rem;
-      border: 1px solid var(--border);
-      border-radius: 100px;
-      color: var(--text-primary);
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: var(--transition);
-      margin-top: 2.5rem;
-      opacity: 0;
-      animation: fadeInUp 0.8s 0.6s forwards;
-    }
+  .links { display: flex; flex-direction: column; gap: 0.55rem; }
 
-    .linkedin-link:hover {
-      border-color: var(--orange);
-      color: var(--orange);
-      transform: translateY(-2px);
-    }
+  .row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1rem 1.15rem;
+    background: var(--bg-row);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .22s ease, transform .22s ease, box-shadow .22s ease;
+    overflow: hidden;
+  }
+  .row::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: center;
+    transition: transform .24s ease;
+  }
+  .row:hover, .row:focus-visible {
+    border-color: var(--line-hi);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hi);
+    outline: none;
+  }
+  .row:hover::before, .row:focus-visible::before { transform: scaleY(1); }
+  .row:focus-visible { box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px var(--accent); }
 
-    .footer-note {
-      position: fixed;
-      bottom: 2rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      opacity: 0;
-      animation: fadeInUp 0.8s 0.8s forwards;
-    }
+  .body { min-width: 0; }
+  .name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 560;
+    letter-spacing: -0.011em;
+    line-height: 1.25;
+  }
+  .desc {
+    display: block;
+    margin-top: 0.24rem;
+    font-size: 0.855rem;
+    color: var(--ink-dim);
+    line-height: 1.4;
+  }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  .arrow {
+    color: var(--ink-faint);
+    transition: color .22s ease, transform .22s ease;
+    flex-shrink: 0;
+  }
+  .row:hover .arrow, .row:focus-visible .arrow {
+    color: var(--accent);
+    transform: translateX(3px);
+  }
+
+  /* ---------- About ---------- */
+  .about {
+    margin-top: 2.6rem;
+    padding-top: 1.9rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.94rem;
+    color: var(--ink-dim);
+    max-width: 52ch;
+    text-wrap: pretty;
+  }
+  .about strong { color: var(--ink); font-weight: 560; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    margin-top: auto;
+    padding-top: 2.75rem;
+    color: var(--ink-faint);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.685rem;
+    letter-spacing: 0.07em;
+  }
+
+  /* ---------- Motion ---------- */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(9px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .reveal { opacity: 0; animation: rise .55s cubic-bezier(.2,.7,.3,1) forwards; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; opacity: 1; }
+    .row, .arrow, .row::before { transition: none; }
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 480px) {
+    body { padding: 2.6rem 1rem 2rem; }
+    .row { padding: 0.95rem 1rem; gap: 0.7rem; }
+    .name { font-size: 0.97rem; }
+    .desc { font-size: 0.825rem; }
+    .about { font-size: 0.9rem; }
+  }
+</style>
 </head>
 <body>
+  <main class="wrap">
 
-  <div class="bg-glow"></div>
+    <header>
+      <h1 class="reveal" style="animation-delay:.04s">Alex Drost</h1>
+      <p class="positioning reveal" style="animation-delay:.12s">
+        Advisor, speaker, and CPA working at the <span class="seam">seam</span> where strategy meets execution.
+      </p>
+      <div class="rule reveal" style="animation-delay:.18s"></div>
+    </header>
 
-  <p class="eyebrow">drost.us</p>
-  <h1><span>Alex</span> <em>Drost</em></h1>
+    <nav class="links" aria-label="Directory">
 
-  <a href="https://www.linkedin.com/in/adrost/" target="_blank" rel="noopener" class="linkedin-link">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-    Connect with Alex Drost on LinkedIn
-  </a>
+      <div class="group-label reveal" style="animation-delay:.22s">Advisory &amp; speaking</div>
 
-  <div class="footer-note">
-    &copy; <script>document.write(new Date().getFullYear())</script> Alex Drost &middot; Detroit, Michigan
-  </div>
+      <a class="row reveal" style="animation-delay:.26s" href="https://www.alexdrost.com">
+        <span class="body">
+          <span class="name">Alex Drost</span>
+          <span class="desc">Speaking, writing, and the personal side</span>
+        </span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
 
+      <!-- ============================================================
+           DROST GROUP — HELD BACK. Not resolving at build time
+           (drost.group is build #2 in the sequence). Guardrail:
+           omit rather than placeholder.
+           TO ENABLE: uncomment this block AND add
+           "https://drost.group" to the sameAs array above.
+           ============================================================
+      <a class="row reveal" style="animation-delay:.29s" href="https://drost.group">
+        <span class="body">
+          <span class="name">Drost Group</span>
+          <span class="desc">Advisory for middle-market professional service firms</span>
+        </span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+      -->
+
+      <a class="row reveal" style="animation-delay:.30s" href="https://connection.builders">
+        <span class="body">
+          <span class="name">Connection Builders</span>
+          <span class="desc">Community and connection for professionals</span>
+        </span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+
+      <div class="group-label reveal" style="animation-delay:.34s">Things I've built</div>
+
+      <a class="row reveal" style="animation-delay:.38s" href="https://bookshelf.drost.us">
+        <span class="body">
+          <span class="name">Bookshelf</span>
+          <span class="desc">300+ books, catalogued</span>
+        </span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+
+      <a class="row reveal" style="animation-delay:.42s" href="https://thebusinessofaccounting.com">
+        <span class="body">
+          <span class="name">The Business of Accounting</span>
+          <span class="desc">Writing on the accounting profession</span>
+        </span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+
+      <a class="row reveal" style="animation-delay:.46s" href="https://vibe.drost.us">
+        <span class="body">
+          <span class="name">Vibe</span>
+          <span class="desc">Vibe-coding projects and experiments</span>
+        </span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+
+      <div class="group-label reveal" style="animation-delay:.50s">Listen &amp; connect</div>
+
+      <a class="row reveal" style="animation-delay:.54s" href="https://connection.builders/podcast">
+        <span class="body">
+          <span class="name">Branch Out Podcast</span>
+          <span class="desc">100+ conversations (archive)</span>
+        </span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+
+      <a class="row reveal" style="animation-delay:.58s" href="https://www.linkedin.com/in/adrost/">
+        <span class="body">
+          <span class="name">LinkedIn</span>
+          <span class="desc">Professional profile</span>
+        </span>
+        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+      </a>
+
+    </nav>
+
+    <p class="about reveal" style="animation-delay:.64s">
+      <strong>Alex Drost</strong> is an advisor and speaker based in Detroit, Michigan. He works with
+      middle-market professional service firms on the gap between a good plan and a plan that actually
+      gets executed. He hosts the Branch Out podcast and keeps a public catalog of everything he reads.
+    </p>
+
+    <footer class="reveal" style="animation-delay:.70s">
+      Alex Drost &middot; <span id="yr">2026</span>
+    </footer>
+
+  </main>
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
