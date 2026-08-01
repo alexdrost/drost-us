@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Alex Drost | Advisor, Speaker &amp; CPA — Detroit, MI</title>
-<meta name="description" content="Alex Drost — advisor, speaker, and CPA in Detroit, Michigan. Links to writing, advisory work, projects, and the Branch Out podcast.">
+<meta name="description" content="CPA and advisor who sees the through-line — connecting business models, strategy, and execution. Detroit, Michigan.">
 <link rel="canonical" href="https://drost.us/">
 <meta name="author" content="Alex Drost">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -16,11 +16,11 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Alex Drost">
 <meta property="og:title" content="Alex Drost | Advisor, Speaker &amp; CPA — Detroit, MI">
-<meta property="og:description" content="Advisor, speaker, and CPA working at the seam where strategy meets execution.">
+<meta property="og:description" content="CPA and advisor who sees the through-line — connecting business models, strategy, and execution.">
 <meta property="og:url" content="https://drost.us/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Alex Drost | Advisor, Speaker &amp; CPA">
-<meta name="twitter:description" content="Advisor, speaker, and CPA working at the seam where strategy meets execution.">
+<meta name="twitter:description" content="CPA and advisor who sees the through-line — connecting business models, strategy, and execution.">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23f6f5f1'/><text x='50%25' y='54%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia, serif' font-weight='600' font-size='62' fill='%23c9662a'>D</text></svg>">
 
@@ -29,22 +29,75 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400..650&display=swap" rel="stylesheet">
 
 <!-- ============================================================
-     SCHEMA — Person (MVP per build handoff)
-     RULES: every URL live · never list drost.us itself ·
-     keep identical (minus self) across all properties.
+     SCHEMA — Person
+     CANON: Notion "Drost web portfolio — credential blocks,
+     sameAs array, and Person/Organization JSON-LD" (rev. 2026-08-01).
+     This supersedes the sameAs rules in the original build handoff.
+
+     Copied byte-identical from the alexdrost.com block with exactly
+     TWO changes: @id and url. Nothing else may differ — not the
+     image URL, not the array, not the credential wording.
+
+     The sameAs array is deliberately self-referential and is IDENTICAL
+     on every property. Do not prune it per site. If it changes here,
+     it changes everywhere on the same day.
+
+     Do NOT add "email" or "telephone" to this block. Ever.
+     telephone lives on the drost.group Organization schema only.
      ============================================================ -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://drost.us/#person",
   "name": "Alex Drost",
-  "url": "https://drost.us",
   "jobTitle": "Advisor & Speaker",
+  "description": "CPA and advisor who sees the through-line — connecting business models, strategy, and execution.",
+  "url": "https://drost.us",
+  "image": "https://alexdrost.com/alex-drost.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Detroit",
+    "addressRegion": "MI",
+    "addressCountry": "US"
+  },
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "Professional License",
+    "name": "Certified Public Accountant (CPA)",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "Michigan Department of Licensing and Regulatory Affairs"
+    }
+  },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Northwood University" },
+    { "@type": "CollegeOrUniversity", "name": "Walsh College" }
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Connection Builders",
+    "url": "https://connection.builders"
+  },
+  "knowsAbout": [
+    "Middle Market",
+    "Mergers and Acquisitions",
+    "Corporate Finance",
+    "Private Capital Markets",
+    "Strategy",
+    "Business Development",
+    "Business Model Design",
+    "Professional Services Firm Strategy"
+  ],
   "sameAs": [
-    "https://www.alexdrost.com",
+    "https://alexdrost.com",
+    "https://drost.group",
+    "https://drost.us",
+    "https://alex.drost.us",
     "https://bookshelf.drost.us",
     "https://vibe.drost.us",
-    "https://thebusinessofaccounting.com",
+    "https://businessofaccounting.com",
+    "https://connection.builders",
     "https://www.linkedin.com/in/adrost/"
   ]
 }
@@ -142,6 +195,15 @@
     text-wrap: pretty;
   }
   .positioning .seam { color: var(--accent); }
+
+  .location {
+    margin-top: 0.85rem;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
 
   .rule {
     margin-top: 1.6rem;
@@ -278,14 +340,18 @@
       <p class="positioning reveal" style="animation-delay:.12s">
         Advisor, speaker, and CPA working at the <span class="seam">seam</span> where strategy meets execution.
       </p>
-      <div class="rule reveal" style="animation-delay:.18s"></div>
+      <!-- ONE geo mention on the whole page. The Tier 2 bio below carries
+           no location, so this line is where "Detroit, Michigan" lives.
+           Do not add it anywhere else in visible copy. -->
+      <p class="location reveal" style="animation-delay:.16s">Detroit, Michigan</p>
+      <div class="rule reveal" style="animation-delay:.20s"></div>
     </header>
 
     <nav class="links" aria-label="Directory">
 
       <div class="group-label reveal" style="animation-delay:.22s">Advisory &amp; speaking</div>
 
-      <a class="row reveal" style="animation-delay:.26s" href="https://www.alexdrost.com">
+      <a class="row reveal" style="animation-delay:.26s" href="https://alexdrost.com">
         <span class="body">
           <span class="name">Alex Drost</span>
           <span class="desc">Speaking, writing, and the personal side</span>
@@ -297,8 +363,10 @@
            DROST GROUP — HELD BACK. Not resolving at build time
            (drost.group is build #2 in the sequence). Guardrail:
            omit rather than placeholder.
-           TO ENABLE: uncomment this block AND add
-           "https://drost.group" to the sameAs array above.
+           NOTE: drost.group IS already in the sameAs array per the Notion
+           canon (the array is byte-identical across all properties).
+           Only the human-clickable row is held back.
+           TO ENABLE: just uncomment this block. The schema needs no change.
            ============================================================
       <a class="row reveal" style="animation-delay:.29s" href="https://drost.group">
         <span class="body">
@@ -327,7 +395,10 @@
         <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
       </a>
 
-      <a class="row reveal" style="animation-delay:.42s" href="https://thebusinessofaccounting.com">
+      <!-- URL per Notion canon. If this 404s, the live variant is
+           https://thebusinessofaccounting.com — swap it HERE and in the
+           sameAs array above together, never one without the other. -->
+      <a class="row reveal" style="animation-delay:.42s" href="https://businessofaccounting.com">
         <span class="body">
           <span class="name">The Business of Accounting</span>
           <span class="desc">Writing on the accounting profession</span>
@@ -363,10 +434,16 @@
 
     </nav>
 
+    <!-- Tier 2 credential block — VERBATIM from the Notion canon.
+         Do not paraphrase, trim, or re-order. Same tier, same words,
+         every property. Contains no location by design. -->
     <p class="about reveal" style="animation-delay:.64s">
-      <strong>Alex Drost</strong> is an advisor and speaker based in Detroit, Michigan. He works with
-      middle-market professional service firms on the gap between a good plan and a plan that actually
-      gets executed. He hosts the Branch Out podcast and keeps a public catalog of everything he reads.
+      <strong>Alex Drost</strong> is a CPA and advisor who sees the through-line — connecting business
+      models, strategy, and execution. He is Managing Principal of Connection Builders and hosts the
+      Branch Out Podcast. Across fifteen years in M&amp;A and private capital markets he has led capital
+      raises and buy- and sell-side transactions across professional services, physician practices, and
+      multi-site retail. He speaks regularly to accounting and advisory audiences on growth, private
+      equity, and business development.
     </p>
 
     <footer class="reveal" style="animation-delay:.70s">
