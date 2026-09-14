@@ -29,7 +29,8 @@
 <!-- ============================================================
      SCHEMA — Person
      CANON: Notion "Drost web portfolio — credential blocks,
-     sameAs array, and Person/Organization JSON-LD" (rev. 2026-08-01).
+     sameAs array, and Person/Organization JSON-LD" (3rd pass, plus the
+     2026-09-14 URL correction). Eleven nodes.
      Byte-identical to the alexdrost.com block except @id and url.
      Never add email or telephone. Never prune the array per site.
      ============================================================ -->
@@ -86,7 +87,9 @@
     "https://vibe.drost.us",
     "https://thebusinessofaccounting.com",
     "https://connection.builders",
-    "https://www.linkedin.com/in/adrost/"
+    "https://www.linkedin.com/in/adrost/",
+    "https://podcasts.apple.com/us/podcast/branch-out-a-podcast-from-connection-builders/id1514604832",
+    "https://open.spotify.com/show/6l5HvlkDpw4aRj6FTBjsYE"
   ]
 }
 </script>
@@ -544,8 +547,8 @@ footer{
     <!-- ═══════ CONTROLS ═══════ -->
     <div class="controls enter" style="animation-delay:.64s">
       <div class="chips" role="group" aria-label="Filter links">
-        <button class="chip" type="button" data-filter="all" aria-pressed="true">All <em>7</em></button>
-        <button class="chip" type="button" data-filter="advisory" aria-pressed="false">Advisory <em>2</em></button>
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">All <em>8</em></button>
+        <button class="chip" type="button" data-filter="advisory" aria-pressed="false">Advisory <em>3</em></button>
         <button class="chip" type="button" data-filter="built" aria-pressed="false">Built <em>3</em></button>
         <button class="chip" type="button" data-filter="connect" aria-pressed="false">Connect <em>2</em></button>
       </div>
@@ -578,15 +581,10 @@ footer{
         </a>
       </div></div>
 
-      <!-- ============================================================
-           DROST GROUP — row held back. Domain was not resolving at
-           build time. It IS in the sameAs array per the Notion canon;
-           only the human-clickable row waits.
-           TO ENABLE: uncomment, then bump the "All" and "Advisory"
-           chip counts from 7/2 to 8/3. Schema needs no change.
-           ============================================================
-      <div class="slot" data-group="advisory"><div class="in">
-        <a class="row" href="https://drost.group" data-find="drost group advisory middle market drost.group">
+      <!-- ENABLED 2026-09-14. drost.group verified live:
+           "Drost Group | Advisory for Middle-Market Firms". -->
+      <div class="slot enter" data-group="advisory" style="animation-delay:.78s"><div class="in">
+        <a class="row" href="https://drost.group" data-find="drost group advisory middle market strategy operations leadership drost.group">
           <i class="rail" aria-hidden="true"></i>
           <span class="body">
             <span class="name">Drost Group</span>
@@ -595,13 +593,12 @@ footer{
               <span class="dest" aria-hidden="true">drost.group</span>
             </span>
           </span>
-          <span class="kind">Site</span>
+          <span class="kind">Firm</span>
           <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
         </a>
       </div></div>
-      -->
 
-      <div class="slot enter" data-group="advisory" style="animation-delay:.78s"><div class="in">
+      <div class="slot enter" data-group="advisory" style="animation-delay:.82s"><div class="in">
         <a class="row" href="https://connection.builders" data-find="connection builders community professionals consultancy connection.builders">
           <i class="rail" aria-hidden="true"></i>
           <span class="body">
@@ -616,11 +613,11 @@ footer{
         </a>
       </div></div>
 
-      <div class="slot enter" data-label="built" style="animation-delay:.82s"><div class="in">
+      <div class="slot enter" data-label="built" style="animation-delay:.86s"><div class="in">
         <p class="group-label">Things I've built</p>
       </div></div>
 
-      <div class="slot enter" data-group="built" style="animation-delay:.86s"><div class="in">
+      <div class="slot enter" data-group="built" style="animation-delay:.90s"><div class="in">
         <a class="row" data-tone="support" href="https://bookshelf.drost.us" data-find="bookshelf books catalogued reading library bookshelf.drost.us">
           <i class="rail" aria-hidden="true"></i>
           <span class="body">
@@ -641,7 +638,7 @@ footer{
            This URL is also fixed in the sameAs array above — the two
            always move together. The canon note needs the same fix,
            and so does every other property carrying the array. -->
-      <div class="slot enter" data-group="built" style="animation-delay:.90s"><div class="in">
+      <div class="slot enter" data-group="built" style="animation-delay:.94s"><div class="in">
         <a class="row" data-tone="support" href="https://thebusinessofaccounting.com" data-find="business of accounting profession cpa firms guide thebusinessofaccounting.com">
           <i class="rail" aria-hidden="true"></i>
           <span class="body">
@@ -656,7 +653,7 @@ footer{
         </a>
       </div></div>
 
-      <div class="slot enter" data-group="built" style="animation-delay:.94s"><div class="in">
+      <div class="slot enter" data-group="built" style="animation-delay:.98s"><div class="in">
         <a class="row" data-tone="support" href="https://vibe.drost.us" data-find="vibe coding projects experiments portfolio vibe.drost.us">
           <i class="rail" aria-hidden="true"></i>
           <span class="body">
@@ -671,11 +668,11 @@ footer{
         </a>
       </div></div>
 
-      <div class="slot enter" data-label="connect" style="animation-delay:.98s"><div class="in">
+      <div class="slot enter" data-label="connect" style="animation-delay:1.02s"><div class="in">
         <p class="group-label">Connect &amp; listen</p>
       </div></div>
 
-      <div class="slot enter" data-group="connect" style="animation-delay:1.02s"><div class="in">
+      <div class="slot enter" data-group="connect" style="animation-delay:1.06s"><div class="in">
         <a class="row" href="https://www.linkedin.com/in/adrost/" data-find="linkedin professional profile social connect adrost">
           <i class="rail" aria-hidden="true"></i>
           <span class="body">
@@ -690,7 +687,7 @@ footer{
         </a>
       </div></div>
 
-      <div class="slot enter" data-group="connect" style="animation-delay:1.06s"><div class="in">
+      <div class="slot enter" data-group="connect" style="animation-delay:1.10s"><div class="in">
         <a class="row" href="https://connection.builders/podcast" data-find="branch out podcast conversations episodes archive listen connection.builders/podcast">
           <i class="rail" aria-hidden="true"></i>
           <span class="body">
@@ -710,16 +707,17 @@ footer{
 
     <!-- Tier 2 credential block — VERBATIM from the Notion canon.
          Do not paraphrase, trim, or re-order. Carries no location by design. -->
-    <p class="about enter" style="animation-delay:1.14s">
+    <p class="about enter" style="animation-delay:1.18s">
       <strong>Alex Drost</strong> is a CPA and advisor who sees the through-line — connecting business
-      models, strategy, and execution. He is Managing Principal of Connection Builders and hosts the
-      Branch Out Podcast. Across fifteen years in M&amp;A and private capital markets he has led capital
-      raises and buy- and sell-side transactions across professional services, physician practices, and
+      models, strategy, and execution. He is Managing Principal of Connection Builders and host of the
+      Branch Out Podcast, a 100+ episode archive of conversations with middle-market leaders. Across
+      fifteen years in M&amp;A and private capital markets he led capital raises and buy- and sell-side
+      transactions totaling nearly $1 billion, across professional services, physician practices, and
       multi-site retail. He speaks regularly to accounting and advisory audiences on growth, private
       equity, and business development.
     </p>
 
-    <footer class="enter" style="animation-delay:1.22s">
+    <footer class="enter" style="animation-delay:1.26s">
       <span>Alex Drost &middot; <span id="yr">2026</span></span>
       <span class="hint"><kbd>/</kbd> to find &middot; <kbd>J</kbd><kbd>K</kbd> to browse</span>
     </footer>
