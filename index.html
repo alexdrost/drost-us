@@ -84,7 +84,7 @@
     "https://alex.drost.us",
     "https://bookshelf.drost.us",
     "https://vibe.drost.us",
-    "https://businessofaccounting.com",
+    "https://thebusinessofaccounting.com",
     "https://connection.builders",
     "https://www.linkedin.com/in/adrost/"
   ]
@@ -547,7 +547,7 @@ footer{
         <button class="chip" type="button" data-filter="all" aria-pressed="true">All <em>7</em></button>
         <button class="chip" type="button" data-filter="advisory" aria-pressed="false">Advisory <em>2</em></button>
         <button class="chip" type="button" data-filter="built" aria-pressed="false">Built <em>3</em></button>
-        <button class="chip" type="button" data-filter="listen" aria-pressed="false">Listen <em>2</em></button>
+        <button class="chip" type="button" data-filter="connect" aria-pressed="false">Connect <em>2</em></button>
       </div>
       <div class="find">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
@@ -635,16 +635,20 @@ footer{
         </a>
       </div></div>
 
-      <!-- URL per Notion canon. If this 404s the live variant is
-           thebusinessofaccounting.com — swap HERE and in sameAs together. -->
+      <!-- CORRECTED 2026-09-14. The Notion canon specified
+           businessofaccounting.com; that domain does not resolve (DNS
+           failure). thebusinessofaccounting.com is verified live.
+           This URL is also fixed in the sameAs array above — the two
+           always move together. The canon note needs the same fix,
+           and so does every other property carrying the array. -->
       <div class="slot enter" data-group="built" style="animation-delay:.90s"><div class="in">
-        <a class="row" data-tone="support" href="https://businessofaccounting.com" data-find="business of accounting profession cpa firms guide businessofaccounting.com">
+        <a class="row" data-tone="support" href="https://thebusinessofaccounting.com" data-find="business of accounting profession cpa firms guide thebusinessofaccounting.com">
           <i class="rail" aria-hidden="true"></i>
           <span class="body">
             <span class="name">The Business of Accounting</span>
             <span class="swap">
               <span class="desc">Writing on the accounting profession</span>
-              <span class="dest" aria-hidden="true">businessofaccounting.com</span>
+              <span class="dest" aria-hidden="true">thebusinessofaccounting.com</span>
             </span>
           </span>
           <span class="kind">Guide</span>
@@ -667,12 +671,27 @@ footer{
         </a>
       </div></div>
 
-      <div class="slot enter" data-label="listen" style="animation-delay:.98s"><div class="in">
-        <p class="group-label">Listen &amp; connect</p>
+      <div class="slot enter" data-label="connect" style="animation-delay:.98s"><div class="in">
+        <p class="group-label">Connect &amp; listen</p>
       </div></div>
 
-      <div class="slot enter" data-group="listen" style="animation-delay:1.02s"><div class="in">
-        <a class="row" href="https://connection.builders/podcast" data-find="branch out podcast conversations episodes archive connection.builders/podcast">
+      <div class="slot enter" data-group="connect" style="animation-delay:1.02s"><div class="in">
+        <a class="row" href="https://www.linkedin.com/in/adrost/" data-find="linkedin professional profile social connect adrost">
+          <i class="rail" aria-hidden="true"></i>
+          <span class="body">
+            <span class="name">LinkedIn</span>
+            <span class="swap">
+              <span class="desc">Where I post, and the direct line</span>
+              <span class="dest" aria-hidden="true">linkedin.com/in/adrost</span>
+            </span>
+          </span>
+          <span class="kind">Profile</span>
+          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+        </a>
+      </div></div>
+
+      <div class="slot enter" data-group="connect" style="animation-delay:1.06s"><div class="in">
+        <a class="row" href="https://connection.builders/podcast" data-find="branch out podcast conversations episodes archive listen connection.builders/podcast">
           <i class="rail" aria-hidden="true"></i>
           <span class="body">
             <span class="name">Branch Out Podcast</span>
@@ -682,21 +701,6 @@ footer{
             </span>
           </span>
           <span class="kind">Podcast</span>
-          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </a>
-      </div></div>
-
-      <div class="slot enter" data-group="listen" style="animation-delay:1.06s"><div class="in">
-        <a class="row" href="https://www.linkedin.com/in/adrost/" data-find="linkedin professional profile social adrost">
-          <i class="rail" aria-hidden="true"></i>
-          <span class="body">
-            <span class="name">LinkedIn</span>
-            <span class="swap">
-              <span class="desc">Professional profile</span>
-              <span class="dest" aria-hidden="true">linkedin.com/in/adrost</span>
-            </span>
-          </span>
-          <span class="kind">Profile</span>
           <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
         </a>
       </div></div>
