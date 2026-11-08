@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Alex Drost | Advisor, Speaker &amp; CPA — Detroit, MI</title>
-<meta name="description" content="CPA and advisor who sees the through-line — connecting business models, strategy, and execution. Detroit, Michigan.">
+<title>Alex Drost, CPA — Strategic Advisor | Detroit, Michigan</title>
+<meta name="description" content="CPA and strategic advisor connecting business models, strategic planning, and tactical execution. Detroit, Michigan.">
 <link rel="canonical" href="https://drost.us/">
 <meta name="author" content="Alex Drost">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -13,12 +13,14 @@
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Alex Drost">
-<meta property="og:title" content="Alex Drost | Advisor, Speaker &amp; CPA — Detroit, MI">
-<meta property="og:description" content="CPA and advisor who sees the through-line — connecting business models, strategy, and execution.">
+<meta property="og:title" content="Alex Drost, CPA — Strategic Advisor">
+<meta property="og:description" content="CPA and strategic advisor connecting business models, strategic planning, and tactical execution.">
 <meta property="og:url" content="https://drost.us/">
+<!-- Share card pending: once chosen, add og:image (+ width, height, alt)
+     and switch twitter:card to summary_large_image. -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Alex Drost | Advisor, Speaker &amp; CPA">
-<meta name="twitter:description" content="CPA and advisor who sees the through-line — connecting business models, strategy, and execution.">
+<meta name="twitter:title" content="Alex Drost, CPA — Strategic Advisor">
+<meta name="twitter:description" content="CPA and strategic advisor connecting business models, strategic planning, and tactical execution.">
 
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23241611'/><text x='50%25' y='55%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia, serif' font-weight='600' font-size='62' fill='%23F97316'>D</text></svg>">
 
@@ -28,11 +30,25 @@
 
 <!-- ============================================================
      SCHEMA — Person
-     CANON: Notion "Drost web portfolio — credential blocks,
-     sameAs array, and Person/Organization JSON-LD" (3rd pass, plus the
-     2026-09-14 URL correction). Eleven nodes.
+     CANON: Notion "Drost web portfolio — credential blocks, sameAs
+     array, and Person/Organization JSON-LD". jobTitle "Strategic
+     Advisor" per the canon update of 8 Nov 2026 (Brand Draft 2).
      Byte-identical to the alexdrost.com block except @id and url.
      Never add email or telephone. Never prune the array per site.
+
+     Two canon fields are deliberately ABSENT, per the guardrail "schema
+     asserts only what the page visibly states" — if a line comes off the
+     page, it comes out of the schema the same commit.
+     · worksFor — the bio names no employer (Brand Draft 2, open
+       decision 1). Restore with:
+       "worksFor": { "@type": "Organization", "name": "Connection Builders",
+                     "url": "https://connection.builders" },
+     · alumniOf — the education line was removed from the hero.
+       Restore together with any visible education line:
+       "alumniOf": [
+         { "@type": "CollegeOrUniversity", "name": "Northwood University" },
+         { "@type": "CollegeOrUniversity", "name": "Walsh College" }
+       ],
      ============================================================ -->
 <script type="application/ld+json">
 {
@@ -40,8 +56,8 @@
   "@type": "Person",
   "@id": "https://drost.us/#person",
   "name": "Alex Drost",
-  "jobTitle": "Advisor & Speaker",
-  "description": "CPA and advisor who sees the through-line — connecting business models, strategy, and execution.",
+  "jobTitle": "Strategic Advisor",
+  "description": "CPA and strategic advisor connecting business models, strategic planning, and tactical execution.",
   "url": "https://drost.us",
   "image": "https://alexdrost.com/alex-drost.jpg",
   "address": {
@@ -58,15 +74,6 @@
       "@type": "Organization",
       "name": "Michigan Department of Licensing and Regulatory Affairs"
     }
-  },
-  "alumniOf": [
-    { "@type": "CollegeOrUniversity", "name": "Northwood University" },
-    { "@type": "CollegeOrUniversity", "name": "Walsh College" }
-  ],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Connection Builders",
-    "url": "https://connection.builders"
   },
   "knowsAbout": [
     "Middle Market",
@@ -98,389 +105,200 @@
 /* ════════════════════════════════════════════════════════════
    CLAY & INK v2 — drost.us
    Dark is the hard default. Light exists only behind the
-   footer switch; the OS setting no longer overrides it.
-   Ground lifted from #1A0F0A to #241611.
+   top-bar switch; the OS setting never overrides it.
    ════════════════════════════════════════════════════════════ */
-
 :root{
-  --ground:      #241611;
-  --ground-deep: #1B100C;
-  --surface:     #30201A;
-  --surface-hi:  #3D2A22;
-  --line:        #452C22;
-  --line-hi:     #62402F;
-
-  --ink:         #F9EADE;
-  --ink-dim:     #B89A8C;
-  --ink-faint:   #856C60;
-
-  --accent:      #F97316;
-  --accent-soft: #FFAE68;
-  --support:     #55C0B0;
-  --support-dim: #38877B;
-
-  --glow:        rgba(249,115,22,.13);
-  --glow-2:      rgba(85,192,176,.055);
-
-  --enter: cubic-bezier(.2,.8,.25,1);
-  --state: cubic-bezier(.4,0,.2,1);
-
-  --measure: 680px;
-  --radius:  3px;
-
-  color-scheme: dark;
+  --ground:#241611; --ground-deep:#1B100C;
+  --surface:#30201A; --surface-hi:#3D2A22;
+  --line:#452C22; --line-hi:#62402F;
+  --ink:#F9EADE; --ink-dim:#B89A8C; --ink-faint:#856C60;
+  --accent:#F97316; --accent-soft:#FFAE68;
+  --support:#55C0B0; --support-dim:#38877B;
+  --glow:rgba(249,115,22,.13); --glow-2:rgba(85,192,176,.055);
+  --enter:cubic-bezier(.2,.8,.25,1); --state:cubic-bezier(.4,0,.2,1);
+  --measure:680px; --radius:3px;
+  color-scheme:dark;
 }
-
-/* Light is opt-in only — the switch, never the OS. */
 :root[data-theme="light"]{
-  --ground:      #EFD9C4;
-  --ground-deep: #E4CBB2;
-  --surface:     #F9E9D8;
-  --surface-hi:  #FFF3E6;
-  --line:        #DCC0A6;
-  --line-hi:     #C09B77;
-  --ink:         #2B1710;
-  --ink-dim:     #77503C;
-  --ink-faint:   #9A7359;
-  --accent:      #B33F08;
-  --accent-soft: #8A5C05;
-  --support:     #14504B;
-  --support-dim: #3C7F78;
-  --glow:        rgba(179,63,8,.075);
-  --glow-2:      rgba(20,80,75,.04);
-  color-scheme: light;
+  --ground:#EFD9C4; --ground-deep:#E4CBB2;
+  --surface:#F9E9D8; --surface-hi:#FFF3E6;
+  --line:#DCC0A6; --line-hi:#C09B77;
+  --ink:#2B1710; --ink-dim:#77503C; --ink-faint:#9A7359;
+  --accent:#B33F08; --accent-soft:#8A5C05;
+  --support:#14504B; --support-dim:#3C7F78;
+  --glow:rgba(179,63,8,.075); --glow-2:rgba(20,80,75,.04);
+  color-scheme:light;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
-
 body{
-  background:var(--ground);
-  color:var(--ink);
+  background:var(--ground);color:var(--ink);
   font-family:"Instrument Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size:16px;
-  line-height:1.55;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-  min-height:100dvh;
-  overflow-x:hidden;
-  transition:background-color .4s var(--state), color .4s var(--state);
+  font-size:16px;line-height:1.55;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  min-height:100dvh;overflow-x:hidden;
+  transition:background-color .4s var(--state),color .4s var(--state);
 }
-
 .field{
   position:fixed;inset:-20%;pointer-events:none;z-index:0;
   background:
     radial-gradient(40rem 30rem at var(--mx,50%) var(--my,18%), var(--glow), transparent 68%),
     radial-gradient(32rem 26rem at calc(100% - var(--mx,50%)) calc(100% - var(--my,30%)), var(--glow-2), transparent 70%);
 }
-
 .page{
-  position:relative;z-index:1;
-  width:100%;max-width:var(--measure);
-  margin:0 auto;
-  padding:0 1.25rem 2rem;
-  display:flex;flex-direction:column;
-  min-height:100dvh;
+  position:relative;z-index:1;width:100%;max-width:var(--measure);
+  margin:0 auto;padding:0 1.25rem 2rem;
+  display:flex;flex-direction:column;min-height:100dvh;
 }
 
 /* ═══════════ top bar ═══════════ */
 .topbar{
-  display:flex;align-items:center;justify-content:space-between;
-  gap:1rem;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
   padding-block:1.4rem;
   font-family:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
   font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
 }
 .wordmark{color:var(--ink-faint)}
 .wordmark b{color:var(--accent);font-weight:500}
-
 .theme{
-  appearance:none;background:transparent;
-  border:1px solid var(--line);border-radius:var(--radius);
-  color:var(--ink-faint);font-family:inherit;
-  font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
-  padding:.42em .75em;cursor:pointer;
-  transition:color .22s var(--state),border-color .22s var(--state);
+  appearance:none;background:transparent;border:1px solid var(--line);border-radius:var(--radius);
+  color:var(--ink-faint);font-family:inherit;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;
+  padding:.42em .75em;cursor:pointer;transition:color .22s var(--state),border-color .22s var(--state);
 }
 .theme:hover,.theme:focus-visible{color:var(--accent);border-color:var(--accent);outline:none}
 
 /* ═══════════ hero ═══════════ */
 .hero{padding-block:clamp(1.5rem,5vh,3rem) clamp(2rem,5vh,3rem)}
-
 .stamp{
   display:flex;align-items:center;gap:.65rem;
   font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:.655rem;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--support);
+  font-size:.655rem;letter-spacing:.16em;text-transform:uppercase;color:var(--support);
 }
-.stamp .dot{
-  width:5px;height:5px;border-radius:50%;background:var(--support);
-  flex-shrink:0;animation:pulse 3.4s var(--state) infinite;
-}
+.stamp .dot{width:5px;height:5px;border-radius:50%;background:var(--support);flex-shrink:0;animation:pulse 3.4s var(--state) infinite}
 .stamp time{color:var(--ink-faint);font-variant-numeric:tabular-nums;letter-spacing:.1em}
-
 h1{
   margin-top:1.1rem;
-  font-family:Fraunces,Georgia,"Times New Roman",serif;
-  font-optical-sizing:auto;
-  font-size:clamp(3rem,13vw,5.25rem);
-  font-weight:600;letter-spacing:-.04em;line-height:.88;
-  color:var(--ink);
+  font-family:Fraunces,Georgia,"Times New Roman",serif;font-optical-sizing:auto;
+  font-size:clamp(2.7rem,11.5vw,4.6rem);font-weight:600;letter-spacing:-.04em;line-height:.9;color:var(--ink);
 }
 .clip{display:block;overflow:hidden;padding-block:.06em}
 .clip > span{display:block;transform:translateY(102%);animation:lift .95s var(--enter) .06s forwards}
 
+/* Title system: the credential rides on the name; the role line carries the title. */
+.role{
+  margin-top:1rem;
+  font-size:clamp(1.05rem,3.4vw,1.2rem);font-weight:600;letter-spacing:-.005em;color:var(--ink);
+}
+
 .positioning{
-  margin-top:1.35rem;
-  font-size:clamp(1.12rem,4vw,1.42rem);
-  line-height:1.42;
-  color:var(--ink-dim);
-  max-width:26ch;
-  text-wrap:pretty;
+  margin-top:.85rem;
+  font-size:clamp(1.12rem,4vw,1.42rem);line-height:1.42;
+  color:var(--ink-dim);max-width:28ch;text-wrap:pretty;
 }
 .positioning .seam{color:var(--accent);font-weight:600}
 
-.creds{
-  margin-top:1.5rem;
-  display:flex;flex-wrap:wrap;gap:.45rem .85rem;
-  font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:.645rem;letter-spacing:.11em;text-transform:uppercase;
-  color:var(--ink-faint);
-}
-.creds span{display:inline-flex;align-items:center;gap:.85rem}
-.creds span::after{content:"";width:3px;height:3px;border-radius:50%;background:var(--line-hi)}
-.creds span:last-child::after{display:none}
-
-/* ═══════════ pillars ═══════════ */
+/* ═══════════ the three layers ═══════════ */
 .pillars{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1px;
-  background:var(--line);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  overflow:hidden;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
 }
 @media (max-width:640px){.pillars{grid-template-columns:1fr}}
-
 .pillar{
-  background:var(--ground-deep);
-  padding:1.15rem 1.15rem 1.25rem;
-  display:flex;flex-direction:column;gap:.5rem;
-  position:relative;
-  transition:background-color .3s var(--state);
+  background:var(--ground-deep);padding:1.15rem 1.15rem 1.25rem;
+  display:flex;flex-direction:column;gap:.5rem;transition:background-color .3s var(--state);
 }
 .pillar:hover{background:var(--surface)}
-.pillar .ph{
-  display:flex;align-items:baseline;justify-content:space-between;gap:.6rem;
-}
-.pillar h2{
-  font-size:.94rem;font-weight:650;letter-spacing:-.015em;color:var(--ink);
-}
-.pillar .stat{
-  font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:.62rem;letter-spacing:.06em;color:var(--accent);
-  white-space:nowrap;font-variant-numeric:tabular-nums;
-}
-.pillar:nth-child(3) .stat{color:var(--support)}
-.pillar p{font-size:.815rem;line-height:1.45;color:var(--ink-dim);text-wrap:pretty}
+.pillar h2{font-size:.96rem;font-weight:650;letter-spacing:-.015em;color:var(--ink)}
+.pillar p{font-size:.83rem;line-height:1.45;color:var(--ink-dim);text-wrap:pretty}
 
-/* ═══════════ divider ═══════════ */
-.seam-rule{
-  margin-block:clamp(2.25rem,6vh,3.25rem) 0;
-  display:flex;align-items:center;gap:1rem;
-}
-.seam-rule i{flex:1;height:1px;background:var(--line)}
-.seam-rule b{
-  font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--ink-faint);font-weight:400;
-}
-
-/* ═══════════ controls ═══════════ */
-.controls{
-  margin-top:1.4rem;
-  display:flex;align-items:center;gap:.85rem;flex-wrap:wrap;
-}
-.chips{display:flex;gap:.4rem;flex-wrap:wrap;flex:1;min-width:0}
-.chip{
-  appearance:none;cursor:pointer;
-  background:transparent;
-  border:1px solid var(--line);
-  border-radius:99px;
-  color:var(--ink-dim);
-  font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:.635rem;letter-spacing:.11em;text-transform:uppercase;
-  padding:.48em .9em;
-  display:inline-flex;align-items:center;gap:.5em;
-  transition:color .22s var(--state),border-color .22s var(--state),background-color .22s var(--state);
-}
-.chip em{font-style:normal;color:var(--ink-faint);font-variant-numeric:tabular-nums}
-.chip:hover,.chip:focus-visible{color:var(--ink);border-color:var(--line-hi);outline:none}
-.chip[aria-pressed="true"]{
-  color:var(--ground);background:var(--accent);border-color:var(--accent);
-}
-.chip[aria-pressed="true"] em{color:var(--ground);opacity:.65}
-
+/* ═══════════ links header: label, rule, find ═══════════ */
+.linkhead{margin-top:clamp(2.25rem,6vh,3.25rem);display:flex;align-items:center;gap:1rem}
+.linkhead b{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--support);font-weight:400}
+.linkhead i{flex:1;height:1px;background:var(--line);min-width:1rem}
 .find{
   position:relative;display:flex;align-items:center;
-  border:1px solid var(--line);border-radius:99px;
-  padding:.3em .75em;gap:.5em;
-  transition:border-color .22s var(--state);
-  min-width:9.5rem;
+  border:1px solid var(--line);border-radius:99px;padding:.3em .75em;gap:.5em;
+  transition:border-color .22s var(--state);width:11.5rem;flex-shrink:0;
 }
-.find:focus-within{border-color:var(--accent)}
+.find:focus-within{border-color:var(--support)}
 .find svg{color:var(--ink-faint);flex-shrink:0}
 .find input{
-  appearance:none;background:transparent;border:0;outline:none;
-  color:var(--ink);width:100%;min-width:0;
-  font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:.66rem;letter-spacing:.06em;
-  padding:.3em 0;
+  appearance:none;background:transparent;border:0;outline:none;color:var(--ink);width:100%;min-width:0;
+  font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.66rem;letter-spacing:.06em;padding:.3em 0;
 }
 .find input::placeholder{color:var(--ink-faint);letter-spacing:.11em;text-transform:uppercase}
-.find kbd{
-  font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.58rem;
-  border:1px solid var(--line);border-radius:3px;padding:.15em .4em;
-  color:var(--ink-faint);flex-shrink:0;
-}
+.find kbd{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.58rem;border:1px solid var(--line);border-radius:3px;padding:.15em .4em;color:var(--ink-faint);flex-shrink:0}
 .find:focus-within kbd{opacity:0}
-@media (max-width:560px){.find{width:100%}}
+@media (max-width:420px){.find{width:9.5rem}}
 
-/* ═══════════ directory ═══════════ */
-.links{margin-top:1.25rem;display:flex;flex-direction:column}
-
-.slot{
-  display:grid;grid-template-rows:1fr;
-  transition:grid-template-rows .36s var(--enter), opacity .22s var(--state);
-}
+/* ═══════════ directory — one list, links in teal ═══════════ */
+.links{margin-top:1.1rem;display:flex;flex-direction:column}
+.slot{display:grid;grid-template-rows:1fr;transition:grid-template-rows .36s var(--enter),opacity .22s var(--state)}
 .slot > .in{overflow:hidden;padding-bottom:.5rem}
 .slot.off{grid-template-rows:0fr;opacity:0;pointer-events:none}
-
-.group-label{
-  display:flex;align-items:center;gap:.85rem;
-  font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:.62rem;letter-spacing:.19em;text-transform:uppercase;
-  color:var(--support);
-  padding:1.15rem 0 .45rem;
-}
-.group-label::after{content:"";flex:1;height:1px;background:var(--line)}
-
 .row{
-  position:relative;
-  display:grid;
-  grid-template-columns:3px 1fr auto auto;
-  align-items:center;gap:1rem;
-  padding:1.05rem 1.15rem 1.05rem 0;
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:var(--radius);
-  text-decoration:none;color:inherit;
-  overflow:hidden;isolation:isolate;
+  position:relative;display:grid;grid-template-columns:3px 1fr auto auto;align-items:center;gap:1rem;
+  padding:1.05rem 1.15rem 1.05rem 0;background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--radius);
+  text-decoration:none;color:inherit;overflow:hidden;isolation:isolate;
   transition:background-color .26s var(--state),border-color .26s var(--state),transform .26s var(--enter);
 }
-.rail{
-  align-self:stretch;background:var(--accent);
-  transform:scaleY(0);transform-origin:center;
-  transition:transform .3s var(--enter);
-}
-.row[data-tone="support"] .rail{background:var(--support)}
-.row::before{
-  content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(100deg,var(--glow),transparent 62%);
-  opacity:0;transition:opacity .3s var(--state);
-}
-
+.rail{align-self:stretch;background:var(--support);transform:scaleY(0);transform-origin:center;transition:transform .3s var(--enter)}
+.row::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,var(--glow-2),transparent 62%);opacity:0;transition:opacity .3s var(--state)}
 .body{min-width:0}
 .name{display:block;font-size:1.03rem;font-weight:600;letter-spacing:-.012em;line-height:1.25;color:var(--ink)}
 .swap{position:relative;display:block;margin-top:.22rem;height:1.2em}
-.swap span{
-  position:absolute;inset:0;font-size:.85rem;line-height:1.2em;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-  transition:opacity .24s var(--state),transform .24s var(--enter);
-}
+.swap span{position:absolute;inset:0;font-size:.85rem;line-height:1.2em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity .24s var(--state),transform .24s var(--enter)}
 .desc{color:var(--ink-dim)}
-.dest{
-  color:var(--accent);font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:.735rem;letter-spacing:.02em;opacity:0;transform:translateY(4px);
-}
-.row[data-tone="support"] .dest{color:var(--support)}
-
+.dest{color:var(--support);font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.735rem;letter-spacing:.02em;opacity:0;transform:translateY(4px)}
 .kind{
-  font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:.585rem;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--ink-faint);
-  border:1px solid var(--line);border-radius:99px;
-  padding:.28em .6em;white-space:nowrap;
+  font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.585rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-faint);border:1px solid var(--line);border-radius:99px;padding:.28em .6em;white-space:nowrap;
   transition:color .26s var(--state),border-color .26s var(--state);
 }
-@media (max-width:520px){.kind{display:none}}
-
 .arrow{color:var(--ink-faint);flex-shrink:0;transition:color .26s var(--state),transform .3s var(--enter)}
-
-.row:hover,.row:focus-visible,.row.is-cued{
-  background:var(--surface-hi);border-color:var(--line-hi);
-  transform:translateY(-2px);outline:none;
-}
+.row:hover,.row:focus-visible,.row.is-cued{background:var(--surface-hi);border-color:var(--line-hi);transform:translateY(-2px);outline:none}
 .row:hover::before,.row:focus-visible::before,.row.is-cued::before{opacity:1}
 .row:hover .rail,.row:focus-visible .rail,.row.is-cued .rail{transform:scaleY(1)}
 .row:hover .desc,.row:focus-visible .desc,.row.is-cued .desc{opacity:0;transform:translateY(-4px)}
 .row:hover .dest,.row:focus-visible .dest,.row.is-cued .dest{opacity:1;transform:translateY(0)}
-.row:hover .arrow,.row:focus-visible .arrow,.row.is-cued .arrow{color:var(--accent);transform:translate(3px,-3px)}
-.row:hover .kind,.row:focus-visible .kind,.row.is-cued .kind{color:var(--accent);border-color:var(--accent)}
-.row[data-tone="support"]:hover .arrow,.row[data-tone="support"]:focus-visible .arrow,.row[data-tone="support"].is-cued .arrow{color:var(--support)}
-.row[data-tone="support"]:hover .kind,.row[data-tone="support"]:focus-visible .kind,.row[data-tone="support"].is-cued .kind{color:var(--support);border-color:var(--support)}
-.row:focus-visible{box-shadow:0 0 0 2px var(--ground),0 0 0 4px var(--accent)}
-
-.empty{
-  padding:1.6rem 0 .5rem;
-  font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:.68rem;letter-spacing:.1em;color:var(--ink-faint);
+.row:hover .arrow,.row:focus-visible .arrow,.row.is-cued .arrow{color:var(--support);transform:translate(3px,-3px)}
+.row:hover .kind,.row:focus-visible .kind,.row.is-cued .kind{color:var(--support);border-color:var(--support)}
+.row:focus-visible{box-shadow:0 0 0 2px var(--ground),0 0 0 4px var(--support)}
+@media (max-width:520px){
+  .kind{display:none}
+  /* No hover on phones: let descriptors wrap instead of truncating, skip the swap. */
+  .swap{height:auto}
+  .swap .desc{position:static;white-space:normal;overflow:visible}
+  .swap .dest{display:none}
+  .row:hover .desc,.row:focus-visible .desc,.row.is-cued .desc{opacity:1;transform:none}
 }
-.empty button{
-  appearance:none;background:none;border:0;cursor:pointer;
-  color:var(--accent);font:inherit;text-decoration:underline;
-  text-underline-offset:3px;padding:0;
-}
+.empty{padding:1.6rem 0 .5rem;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.68rem;letter-spacing:.1em;color:var(--ink-faint)}
+.empty button{appearance:none;background:none;border:0;cursor:pointer;color:var(--support);font:inherit;text-decoration:underline;text-underline-offset:3px;padding:0}
 
 /* ═══════════ about ═══════════ */
-.about{
-  margin-top:2.6rem;padding-top:1.9rem;
-  border-top:1px solid var(--line);
-  font-size:.95rem;color:var(--ink-dim);
-  max-width:58ch;text-wrap:pretty;
-}
+.about{margin-top:2.6rem;padding-top:1.9rem;border-top:1px solid var(--line);font-size:.95rem;color:var(--ink-dim);max-width:58ch;text-wrap:pretty}
 .about strong{color:var(--ink);font-weight:600}
 
 footer{
-  margin-top:auto;padding-top:2.75rem;
-  display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;
-  font-family:"JetBrains Mono",ui-monospace,monospace;
-  font-size:.645rem;letter-spacing:.09em;color:var(--ink-faint);
+  margin-top:auto;padding-top:2.75rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.645rem;letter-spacing:.09em;color:var(--ink-faint);
 }
 .hint{display:none}
 @media (hover:hover) and (pointer:fine){.hint{display:inline}}
-.hint kbd{
-  font-family:inherit;border:1px solid var(--line-hi);border-radius:3px;
-  padding:.1em .38em;color:var(--ink-dim);margin-inline:.1em;
-}
+.hint kbd{font-family:inherit;border:1px solid var(--line-hi);border-radius:3px;padding:.1em .38em;color:var(--ink-dim);margin-inline:.1em}
 
-/* ═══════════ entrance ═══════════ */
 @keyframes lift{to{transform:translateY(0)}}
 @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.25}}
 .enter{opacity:0;animation:rise .6s var(--enter) forwards}
-
 @media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{
-    animation-duration:.01ms !important;animation-delay:0ms !important;
-    animation-iteration-count:1 !important;transition-duration:.01ms !important;
-  }
+  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
   .enter{opacity:1}
   .clip > span{transform:none}
   .field{display:none}
 }
-
 @media (max-width:480px){
   .page{padding:0 1.05rem 1.75rem}
   .row{padding:.95rem 1rem .95rem 0;gap:.8rem}
@@ -501,57 +319,43 @@ footer{
       <button class="theme" id="theme" type="button" aria-label="Switch to light appearance">Light</button>
     </div>
 
-    <!-- ═══════ HERO ═══════ -->
     <header class="hero">
-      <!-- ONE geo mention on the page. The Tier 2 bio carries no location
-           by design, and the credential strip below deliberately omits it. -->
+      <!-- ONE geo mention on the page. The bio carries no location by design. -->
       <p class="stamp enter" style="animation-delay:.08s">
         <span class="dot" aria-hidden="true"></span>
         <span>Detroit, Michigan</span>
         <time id="clock" datetime="">—</time>
       </p>
 
-      <h1><span class="clip"><span>Alex Drost</span></span></h1>
+      <!-- Brand title system: "CPA rides on the name"; the role line carries
+           the title. Together they read "Alex Drost, CPA — Strategic Advisor". -->
+      <h1><span class="clip"><span>Alex Drost, CPA</span></span></h1>
 
-      <p class="positioning enter" style="animation-delay:.34s">
-        Advisor, speaker, and CPA working at the <span class="seam">seam</span> where strategy meets execution.
-      </p>
+      <p class="role enter" style="animation-delay:.28s">Strategic Advisor</p>
 
-      <p class="creds enter" style="animation-delay:.42s">
-        <span>CPA — State of Michigan</span>
-        <span>Northwood University</span>
-        <span>Walsh College</span>
+      <p class="positioning enter" style="animation-delay:.36s">
+        Working the <span class="seam">intersection</span> of business models, strategic planning, and tactical execution.
       </p>
     </header>
 
-    <!-- ═══════ PILLARS ═══════ -->
-    <section class="pillars enter" style="animation-delay:.50s" aria-label="What I do">
+    <!-- The three layers the brand connects. Two-word titles, one line each, no figures. -->
+    <section class="pillars enter" style="animation-delay:.48s" aria-label="The through-line">
       <div class="pillar">
-        <div class="ph"><h2>Advise</h2><span class="stat">15 yrs</span></div>
-        <p>Middle-market professional service firms, on strategy, growth, and the gap before execution.</p>
+        <h2>Business Model</h2>
+        <p>How the firm engages clients and creates value through its service offerings.</p>
       </div>
       <div class="pillar">
-        <div class="ph"><h2>Speak</h2><span class="stat">MICPA · ACG</span></div>
-        <p>Accounting and advisory audiences on private equity, growth, and business development.</p>
+        <h2>Strategic Planning</h2>
+        <p>Where the firm is going, and whether the business model can get it there.</p>
       </div>
       <div class="pillar">
-        <div class="ph"><h2>Build</h2><span class="stat">300+ books</span></div>
-        <p>A catalogued bookshelf, a field guide to firm economics, a podcast archive, and side projects.</p>
+        <h2>Tactical Execution</h2>
+        <p>How the work actually gets done, and whether it moves the plan forward.</p>
       </div>
     </section>
 
-    <div class="seam-rule enter" style="animation-delay:.58s">
-      <b>Where to find things</b><i></i>
-    </div>
-
-    <!-- ═══════ CONTROLS ═══════ -->
-    <div class="controls enter" style="animation-delay:.64s">
-      <div class="chips" role="group" aria-label="Filter links">
-        <button class="chip" type="button" data-filter="all" aria-pressed="true">All <em>8</em></button>
-        <button class="chip" type="button" data-filter="advisory" aria-pressed="false">Advisory <em>3</em></button>
-        <button class="chip" type="button" data-filter="built" aria-pressed="false">Built <em>3</em></button>
-        <button class="chip" type="button" data-filter="connect" aria-pressed="false">Connect <em>2</em></button>
-      </div>
+    <div class="linkhead enter" style="animation-delay:.60s">
+      <b>Links</b><i></i>
       <div class="find">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
         <input id="find" type="search" placeholder="Find" autocomplete="off" spellcheck="false" aria-label="Find a link">
@@ -559,144 +363,78 @@ footer{
       </div>
     </div>
 
-    <!-- ═══════ DIRECTORY ═══════ -->
-    <nav class="links" id="dir" aria-label="Directory">
+    <nav class="links" id="dir" aria-label="Links">
 
-      <div class="slot enter" data-label="advisory" style="animation-delay:.70s"><div class="in">
-        <p class="group-label">Advisory &amp; speaking</p>
-      </div></div>
+      <!-- Seven rows. Personal Site, Drost Group and Connection Builders are
+           off the list until those sites are built out; all three stay in
+           the schema's sameAs, which is never pruned per site. -->
 
-      <div class="slot enter" data-group="advisory" style="animation-delay:.74s"><div class="in">
-        <a class="row" href="https://alexdrost.com" data-find="alex drost speaking writing personal alexdrost.com">
+      <div class="slot enter" style="animation-delay:0.70s"><div class="in">
+        <a class="row" href="https://www.linkedin.com/in/adrost/" data-find="linkedin profile social follow updates connect adrost">
           <i class="rail" aria-hidden="true"></i>
-          <span class="body">
-            <span class="name">Alex Drost</span>
-            <span class="swap">
-              <span class="desc">Speaking, writing, and the personal side</span>
-              <span class="dest" aria-hidden="true">alexdrost.com</span>
-            </span>
-          </span>
-          <span class="kind">Site</span>
-          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </a>
-      </div></div>
-
-      <!-- ENABLED 2026-09-14. drost.group verified live:
-           "Drost Group | Advisory for Middle-Market Firms". -->
-      <div class="slot enter" data-group="advisory" style="animation-delay:.78s"><div class="in">
-        <a class="row" href="https://drost.group" data-find="drost group advisory middle market strategy operations leadership drost.group">
-          <i class="rail" aria-hidden="true"></i>
-          <span class="body">
-            <span class="name">Drost Group</span>
-            <span class="swap">
-              <span class="desc">Advisory for middle-market professional service firms</span>
-              <span class="dest" aria-hidden="true">drost.group</span>
-            </span>
-          </span>
-          <span class="kind">Firm</span>
-          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </a>
-      </div></div>
-
-      <div class="slot enter" data-group="advisory" style="animation-delay:.82s"><div class="in">
-        <a class="row" href="https://connection.builders" data-find="connection builders community professionals consultancy connection.builders">
-          <i class="rail" aria-hidden="true"></i>
-          <span class="body">
-            <span class="name">Connection Builders</span>
-            <span class="swap">
-              <span class="desc">Community and connection for professionals</span>
-              <span class="dest" aria-hidden="true">connection.builders</span>
-            </span>
-          </span>
-          <span class="kind">Firm</span>
-          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </a>
-      </div></div>
-
-      <div class="slot enter" data-label="built" style="animation-delay:.86s"><div class="in">
-        <p class="group-label">Things I've built</p>
-      </div></div>
-
-      <div class="slot enter" data-group="built" style="animation-delay:.90s"><div class="in">
-        <a class="row" data-tone="support" href="https://bookshelf.drost.us" data-find="bookshelf books catalogued reading library bookshelf.drost.us">
-          <i class="rail" aria-hidden="true"></i>
-          <span class="body">
-            <span class="name">Bookshelf</span>
-            <span class="swap">
-              <span class="desc">300+ books, catalogued</span>
-              <span class="dest" aria-hidden="true">bookshelf.drost.us</span>
-            </span>
-          </span>
-          <span class="kind">Project</span>
-          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </a>
-      </div></div>
-
-      <!-- CORRECTED 2026-09-14. The Notion canon specified
-           businessofaccounting.com; that domain does not resolve (DNS
-           failure). thebusinessofaccounting.com is verified live.
-           This URL is also fixed in the sameAs array above — the two
-           always move together. The canon note needs the same fix,
-           and so does every other property carrying the array. -->
-      <div class="slot enter" data-group="built" style="animation-delay:.94s"><div class="in">
-        <a class="row" data-tone="support" href="https://thebusinessofaccounting.com" data-find="business of accounting profession cpa firms guide thebusinessofaccounting.com">
-          <i class="rail" aria-hidden="true"></i>
-          <span class="body">
-            <span class="name">The Business of Accounting</span>
-            <span class="swap">
-              <span class="desc">Writing on the accounting profession</span>
-              <span class="dest" aria-hidden="true">thebusinessofaccounting.com</span>
-            </span>
-          </span>
-          <span class="kind">Guide</span>
-          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </a>
-      </div></div>
-
-      <div class="slot enter" data-group="built" style="animation-delay:.98s"><div class="in">
-        <a class="row" data-tone="support" href="https://vibe.drost.us" data-find="vibe coding projects experiments portfolio vibe.drost.us">
-          <i class="rail" aria-hidden="true"></i>
-          <span class="body">
-            <span class="name">Vibe</span>
-            <span class="swap">
-              <span class="desc">Vibe-coding projects and experiments</span>
-              <span class="dest" aria-hidden="true">vibe.drost.us</span>
-            </span>
-          </span>
-          <span class="kind">Project</span>
-          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
-        </a>
-      </div></div>
-
-      <div class="slot enter" data-label="connect" style="animation-delay:1.02s"><div class="in">
-        <p class="group-label">Connect &amp; listen</p>
-      </div></div>
-
-      <div class="slot enter" data-group="connect" style="animation-delay:1.06s"><div class="in">
-        <a class="row" href="https://www.linkedin.com/in/adrost/" data-find="linkedin professional profile social connect adrost">
-          <i class="rail" aria-hidden="true"></i>
-          <span class="body">
-            <span class="name">LinkedIn</span>
-            <span class="swap">
-              <span class="desc">Where I post, and the direct line</span>
-              <span class="dest" aria-hidden="true">linkedin.com/in/adrost</span>
-            </span>
-          </span>
+          <span class="body"><span class="name">LinkedIn</span>
+            <span class="swap"><span class="desc">Follow me for updates</span><span class="dest" aria-hidden="true">linkedin.com/in/adrost</span></span></span>
           <span class="kind">Profile</span>
           <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
         </a>
       </div></div>
 
-      <div class="slot enter" data-group="connect" style="animation-delay:1.10s"><div class="in">
-        <a class="row" href="https://connection.builders/podcast" data-find="branch out podcast conversations episodes archive listen connection.builders/podcast">
+      <div class="slot enter" style="animation-delay:0.74s"><div class="in">
+        <a class="row" href="https://alex.drost.us" data-find="business card bio info about contact reach get in touch alex.drost.us">
           <i class="rail" aria-hidden="true"></i>
-          <span class="body">
-            <span class="name">Branch Out Podcast</span>
-            <span class="swap">
-              <span class="desc">100+ conversations (archive)</span>
-              <span class="dest" aria-hidden="true">connection.builders/podcast</span>
-            </span>
-          </span>
+          <span class="body"><span class="name">Business Card</span>
+            <span class="swap"><span class="desc">Who I am and how to reach me</span><span class="dest" aria-hidden="true">alex.drost.us</span></span></span>
+          <span class="kind">Info</span>
+          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+        </a>
+      </div></div>
+
+      <!-- Confirm this URL resolves before shipping (share.drost.us blocks automated checks). -->
+      <div class="slot enter" style="animation-delay:0.78s"><div class="in">
+        <a class="row" href="https://share.drost.us/accounting-industry-landscape" data-find="accounting industry landscape report m&amp;a private equity consolidation share.drost.us">
+          <i class="rail" aria-hidden="true"></i>
+          <span class="body"><span class="name">Accounting Industry Landscape</span>
+            <span class="swap"><span class="desc">M&amp;A, private equity, and industry consolidation</span><span class="dest" aria-hidden="true">share.drost.us</span></span></span>
+          <span class="kind">Report</span>
+          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+        </a>
+      </div></div>
+
+      <div class="slot enter" style="animation-delay:0.82s"><div class="in">
+        <a class="row" href="https://thebusinessofaccounting.com" data-find="business of accounting cpa firms operate grow guide thebusinessofaccounting.com">
+          <i class="rail" aria-hidden="true"></i>
+          <span class="body"><span class="name">The Business of Accounting</span>
+            <span class="swap"><span class="desc">How CPA firms operate and grow</span><span class="dest" aria-hidden="true">thebusinessofaccounting.com</span></span></span>
+          <span class="kind">Guide</span>
+          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+        </a>
+      </div></div>
+
+      <div class="slot enter" style="animation-delay:0.86s"><div class="in">
+        <a class="row" href="https://bookshelf.drost.us" data-find="bookshelf books reading catalogued cataloged library bookshelf.drost.us">
+          <i class="rail" aria-hidden="true"></i>
+          <span class="body"><span class="name">Bookshelf</span>
+            <span class="swap"><span class="desc">Years of reading, cataloged and organized</span><span class="dest" aria-hidden="true">bookshelf.drost.us</span></span></span>
+          <span class="kind">Reading</span>
+          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+        </a>
+      </div></div>
+
+      <div class="slot enter" style="animation-delay:0.90s"><div class="in">
+        <a class="row" href="https://vibe.drost.us" data-find="vibe code coding projects built learn experiments vibe.drost.us">
+          <i class="rail" aria-hidden="true"></i>
+          <span class="body"><span class="name">Vibe-Code Projects</span>
+            <span class="swap"><span class="desc">Things I&rsquo;ve built for fun and to learn</span><span class="dest" aria-hidden="true">vibe.drost.us</span></span></span>
+          <span class="kind">Project</span>
+          <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+        </a>
+      </div></div>
+
+      <div class="slot enter" style="animation-delay:0.94s"><div class="in">
+        <a class="row" href="https://connection.builders/podcast" data-find="branch out podcast conversations growth episodes archive listen connection.builders/podcast">
+          <i class="rail" aria-hidden="true"></i>
+          <span class="body"><span class="name">Branch Out Podcast</span>
+            <span class="swap"><span class="desc">100+ growth-focused conversations</span><span class="dest" aria-hidden="true">connection.builders/podcast</span></span></span>
           <span class="kind">Podcast</span>
           <svg class="arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
         </a>
@@ -705,20 +443,17 @@ footer{
       <p class="empty" id="empty" hidden>No match. <button type="button" id="clearfind">Clear</button></p>
     </nav>
 
-    <!-- Tier 2 credential block — VERBATIM from the Notion canon.
-         Do not paraphrase, trim, or re-order. Carries no location by design. -->
-    <p class="about enter" style="animation-delay:1.18s">
-      <strong>Alex Drost</strong> is a CPA and advisor who sees the through-line — connecting business
-      models, strategy, and execution. He is Managing Principal of Connection Builders and host of the
-      Branch Out Podcast, a 100+ episode archive of conversations with middle-market leaders. Across
-      fifteen years in M&amp;A and private capital markets he led capital raises and buy- and sell-side
-      transactions totaling nearly $1 billion, across professional services, physician practices, and
-      multi-site retail. He speaks regularly to accounting and advisory audiences on growth, private
-      equity, and business development.
+    <!-- Short bio, Alex's edit of 8 Nov 2026 (from Brand Draft 2's Tier 2).
+         Runs AHEAD of the Notion canon until the bios lock.
+         Names no employer, carries no figures, no location. -->
+    <p class="about enter" style="animation-delay:1.02s">
+      <strong>Alex Drost</strong> is a CPA and strategic advisor who sees the through-line — connecting
+      business models, strategic planning, and tactical execution. He works with leaders of middle-market
+      professional service firms on growth and the decisions behind it.
     </p>
 
-    <footer class="enter" style="animation-delay:1.26s">
-      <span>Alex Drost &middot; <span id="yr">2026</span></span>
+    <footer class="enter" style="animation-delay:1.10s">
+      <span>&copy; <span id="yr">2026</span> Alex Drost</span>
       <span class="hint"><kbd>/</kbd> to find &middot; <kbd>J</kbd><kbd>K</kbd> to browse</span>
     </footer>
 
@@ -728,18 +463,14 @@ footer{
 (function(){
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
   document.getElementById("yr").textContent = new Date().getFullYear();
 
-  /* ── Detroit clock ──
-     The page names one city. This makes that mean something. */
+  /* ── Detroit clock ── */
   var clock = document.getElementById("clock");
   function tick(){
     var now = new Date();
     try{
-      clock.textContent = new Intl.DateTimeFormat("en-US",{
-        timeZone:"America/Detroit", hour:"numeric", minute:"2-digit"
-      }).format(now);
+      clock.textContent = new Intl.DateTimeFormat("en-US",{timeZone:"America/Detroit",hour:"numeric",minute:"2-digit"}).format(now);
       clock.setAttribute("datetime", now.toISOString());
     }catch(e){ clock.textContent = ""; }
   }
@@ -758,116 +489,63 @@ footer{
       cx += (tx-cx)*.055; cy += (ty-cy)*.055;
       field.style.setProperty("--mx", cx.toFixed(2)+"%");
       field.style.setProperty("--my", cy.toFixed(2)+"%");
-      if(Math.abs(tx-cx)>.1 || Math.abs(ty-cy)>.1){ raf = requestAnimationFrame(step); }
-      else{ raf = null; }
+      if(Math.abs(tx-cx)>.1 || Math.abs(ty-cy)>.1){ raf = requestAnimationFrame(step); } else { raf = null; }
     }
   }
 
-  /* ══════════ directory filtering ══════════
-     One state, two inputs: the chips set a group, the find box
-     sets a query. Both narrow the same list. */
-  var dir      = document.getElementById("dir");
-  var slots    = Array.prototype.slice.call(dir.querySelectorAll(".slot"));
-  var chips    = Array.prototype.slice.call(document.querySelectorAll(".chip"));
-  var find     = document.getElementById("find");
-  var empty    = document.getElementById("empty");
+  /* ── find: one query narrows the single list ── */
+  var dir = document.getElementById("dir");
+  var slots = Array.prototype.slice.call(dir.querySelectorAll(".slot"));
+  var find = document.getElementById("find");
+  var empty = document.getElementById("empty");
   var clearBtn = document.getElementById("clearfind");
-
-  var group = "all";
   var query = "";
 
   function visibleRows(){
-    return slots
-      .filter(function(s){ return s.dataset.group && !s.classList.contains("off"); })
-      .map(function(s){ return s.querySelector(".row"); })
-      .filter(Boolean);
+    return slots.filter(function(s){ return !s.classList.contains("off"); })
+                .map(function(s){ return s.querySelector(".row"); }).filter(Boolean);
   }
-
   function apply(){
-    var q = query.trim().toLowerCase();
-    var shown = 0;
-
+    var q = query.trim().toLowerCase(), shown = 0;
     slots.forEach(function(slot){
-      var off;
-      if(slot.dataset.label){
-        /* Group headings only earn their place when nothing else
-           is narrowing the list — the chip already names the group. */
-        off = (group !== "all") || q.length > 0;
-      }else{
-        var inGroup = (group === "all") || (slot.dataset.group === group);
-        var row = slot.querySelector(".row");
-        var hay = row ? (row.dataset.find || "") : "";
-        var match = !q || hay.indexOf(q) > -1;
-        off = !(inGroup && match);
-        if(!off) shown++;
-      }
+      var row = slot.querySelector(".row");
+      var hay = row ? (row.dataset.find || "") : "";
+      var off = !!q && hay.indexOf(q) < 0;
+      if(!off) shown++;
       slot.classList.toggle("off", off);
-      var a = slot.querySelector(".row");
-      if(a) a.tabIndex = off ? -1 : 0;
+      if(row) row.tabIndex = off ? -1 : 0;
     });
-
     empty.hidden = shown > 0;
     if(cue > -1) clearCue();
   }
-
-  chips.forEach(function(chip){
-    chip.addEventListener("click", function(){
-      group = chip.dataset.filter;
-      chips.forEach(function(c){ c.setAttribute("aria-pressed", String(c === chip)); });
-      apply();
-    });
-  });
-
   find.addEventListener("input", function(){ query = find.value; apply(); });
-  find.addEventListener("keydown", function(e){
-    if(e.key === "Escape"){ find.value = ""; query = ""; apply(); find.blur(); }
-  });
-  clearBtn.addEventListener("click", function(){
-    find.value = ""; query = "";
-    group = "all";
-    chips.forEach(function(c){ c.setAttribute("aria-pressed", String(c.dataset.filter === "all")); });
-    apply(); find.focus();
-  });
+  find.addEventListener("keydown", function(e){ if(e.key === "Escape"){ find.value = ""; query = ""; apply(); find.blur(); } });
+  clearBtn.addEventListener("click", function(){ find.value = ""; query = ""; apply(); find.focus(); });
 
-  /* ══════════ keyboard browsing ══════════ */
+  /* ── keyboard browsing ── */
   var cue = -1, cueEl = null;
-  function clearCue(){
-    if(cueEl) cueEl.classList.remove("is-cued");
-    cueEl = null; cue = -1;
-  }
+  function clearCue(){ if(cueEl) cueEl.classList.remove("is-cued"); cueEl = null; cue = -1; }
   function setCue(i){
-    var rows = visibleRows();
-    if(!rows.length) return;
+    var rows = visibleRows(); if(!rows.length) return;
     if(cueEl) cueEl.classList.remove("is-cued");
     cue = Math.max(0, Math.min(rows.length - 1, i));
-    cueEl = rows[cue];
-    cueEl.classList.add("is-cued");
+    cueEl = rows[cue]; cueEl.classList.add("is-cued");
     cueEl.focus({preventScroll:true});
     cueEl.scrollIntoView({block:"nearest", behavior: reduce ? "auto" : "smooth"});
   }
   document.addEventListener("keydown", function(e){
     if(e.metaKey || e.ctrlKey || e.altKey) return;
-    var t = e.target;
-    var typing = t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA");
-
+    var t = e.target, typing = t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA");
     if(e.key === "/" && !typing){ e.preventDefault(); find.focus(); find.select(); return; }
     if(typing) return;
-
     if(e.key === "j" || e.key === "J" || e.key === "ArrowDown"){ e.preventDefault(); setCue(cue + 1); }
     else if(e.key === "k" || e.key === "K" || e.key === "ArrowUp"){ e.preventDefault(); setCue(cue < 0 ? 0 : cue - 1); }
     else if(e.key === "Escape"){ clearCue(); if(t && t.blur) t.blur(); }
   });
-  dir.addEventListener("focusout", function(e){
-    if(e.target.classList && e.target.classList.contains("row")) e.target.classList.remove("is-cued");
-  });
+  dir.addEventListener("focusout", function(e){ if(e.target.classList && e.target.classList.contains("row")) e.target.classList.remove("is-cued"); });
 
-  /* ══════════ appearance ══════════
-     Dark is the hard default. The OS setting no longer overrides it —
-     only this switch does, remembered on this device. */
-  var root = document.documentElement;
-  var btn  = document.getElementById("theme");
-  var STORE = "drost-appearance";
-
+  /* ── appearance: dark is the hard default ── */
+  var root = document.documentElement, btn = document.getElementById("theme"), STORE = "drost-appearance";
   function isLight(){ return root.getAttribute("data-theme") === "light"; }
   function paint(){
     var light = isLight();
@@ -876,9 +554,7 @@ footer{
     var meta = document.querySelector('meta[name="theme-color"]');
     if(meta) meta.setAttribute("content", light ? "#EFD9C4" : "#241611");
   }
-  try{
-    if(localStorage.getItem(STORE) === "light") root.setAttribute("data-theme","light");
-  }catch(e){}
+  try{ if(localStorage.getItem(STORE) === "light") root.setAttribute("data-theme","light"); }catch(e){}
   paint();
   btn.addEventListener("click", function(){
     if(isLight()){ root.removeAttribute("data-theme"); try{ localStorage.setItem(STORE,"dark"); }catch(e){} }
